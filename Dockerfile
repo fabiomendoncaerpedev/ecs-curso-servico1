@@ -1,3 +1,3 @@
 FROM nginx:alpine
 
-COPY ./data.json /usr/share/nginx/html/data.json
+COPY ./servico1.json /usr/share/nginx/html/servico1.json
