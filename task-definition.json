@@ -1,0 +1,58 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:824663932203:task-definition/servico1:5",
+    "containerDefinitions": [
+        {
+            "name": "servico1",
+            "image": "824663932203.dkr.ecr.us-east-1.amazonaws.com/servico1:d158ed14e65ecbef215b4aa2a658e6f0ce717cb6",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 0,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [
+                {
+                    "name": "USUARIO",
+                    "valueFrom": "arn:aws:secretsmanager:us-east-1:824663932203:secret:teste-l1SRkm:usuario::"
+                }
+            ]
+        }
+    ],
+    "family": "servico1",
+    "executionRoleArn": "arn:aws:iam::824663932203:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 5,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EXTERNAL",
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "512",
+    "memory": "512",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2022-09-18T00:45:16.991Z",
+    "registeredBy": "arn:aws:iam::824663932203:user/curso-ecs",
+    "tags": []
+}
